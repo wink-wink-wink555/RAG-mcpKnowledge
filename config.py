@@ -1,5 +1,5 @@
 # 阿里云百炼API配置
-API_KEY = "your-api-key"  # 你的阿里云百炼API密钥
+API_KEY = "your-api-key-here"  # 你的阿里云百炼API密钥
 EMBEDDING_MODEL = "text-embedding-v4"  # 阿里云百炼Embedding模型
 LLM_MODEL = "qwen2.5-72b-instruct"  # 千问2.5 72B指令模型
 
