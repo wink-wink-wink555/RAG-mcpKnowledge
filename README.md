@@ -2,6 +2,24 @@
 
 基于阿里云百炼API（Qwen模型）的MCP协议知识库RAG系统，提供智能问答和文档检索功能。
 
+## 🎯 为什么做这个项目
+
+Model Context Protocol (MCP) 是一个相对较新的协议规范，于2024年末正式发布。由于其发布时间较短，目前大多数大语言模型的训练数据中都缺乏充足的MCP相关知识。这对于想要通过AI助手学习MCP协议的开发者来说是一个挑战。
+
+**主要痛点：**
+- 🤖 **知识缺失**：主流大模型对MCP协议的了解有限
+- 📚 **学习困难**：开发者难以通过AI获得准确的MCP指导
+- 🔍 **信息分散**：MCP文档分散在多个仓库和网站
+- 💡 **实践障碍**：缺乏集成的学习和实践环境
+
+**本项目的解决方案：**
+- ✅ 整合官方MCP文档，构建专业知识库
+- ✅ 使用RAG技术增强大模型的MCP知识
+- ✅ 提供友好的Web界面，便于学习和查询
+- ✅ 支持中文问答，降低学习门槛
+
+让AI真正成为MCP学习的好帮手！
+
 ## 🌟 项目特点
 
 - **🚀 先进的AI技术**：集成阿里云百炼Qwen2.5-72B大模型和text-embedding-v4嵌入模型
@@ -47,7 +65,24 @@ pip install -r requirements.txt
 API_KEY = "your-api-key-here"  # 替换为您的API密钥
 ```
 
-### 5. 启动服务
+### 5. 初始化知识库
+
+由于GitHub仓库不包含`chroma_db`文件夹（向量数据库），首次运行需要生成知识库：
+
+```bash
+# 首次运行，生成向量数据库
+python main.py --rebuild
+```
+
+这个过程会：
+1. 🔍 扫描`txt/`目录下的所有文档
+2. 📄 读取并分析文档内容
+3. 🧠 调用阿里云百炼API生成向量
+4. 💾 创建`chroma_db/`文件夹并存储向量数据
+
+**注意：** 初次构建可能需要几分钟时间，取决于文档数量和网络速度。
+
+### 6. 启动服务
 
 ```bash
 python main.py
@@ -56,6 +91,18 @@ python main.py
 服务将在 `http://localhost:8000` 启动。
 
 ## 🎯 使用指南
+
+### ⚡ 快速开始
+
+**首次使用必须先初始化知识库：**
+
+```bash
+# 1. 首次运行，生成向量数据库（必须）
+python main.py --rebuild
+
+# 2. 启动Web服务
+python main.py
+```
 
 ### Web界面使用
 
@@ -99,7 +146,7 @@ RAG-mcpKnowledge/
 │   ├── mcp_rule.txt      # MCP协议完整文档 (来源: https://modelcontextprotocol.io/llms-full.txt)
 │   ├── mcp_rule_py.txt   # Python SDK文档 (来源: https://github.com/modelcontextprotocol/python-sdk)
 │   └── mcp_rule_ts.txt   # TypeScript SDK文档 (来源: https://github.com/modelcontextprotocol/typescript-sdk)
-└── chroma_db/            # 向量数据库（自动生成）
+└── chroma_db/            # 向量数据库（首次运行 --rebuild 后自动生成）
 ```
 
 ## ⚙️ 配置说明
@@ -197,11 +244,12 @@ python main.py
 
 ### ⚠️ 重要注意事项
 
-1. **文档格式**：目前只支持`.txt`格式的文档
-2. **文档编码**：请确保文档使用UTF-8编码
-3. **处理时间**：向量生成需要时间，文档越多耗时越长
-4. **API限制**：注意阿里云百炼API的调用频率限制
-5. **存储空间**：大量文档会占用较多磁盘空间
+1. **首次运行**：从GitHub克隆项目后，必须先运行 `python main.py --rebuild` 生成向量数据库
+2. **文档格式**：目前只支持`.txt`格式的文档
+3. **文档编码**：请确保文档使用UTF-8编码
+4. **处理时间**：向量生成需要时间，文档越多耗时越长
+5. **API限制**：注意阿里云百炼API的调用频率限制
+6. **存储空间**：大量文档会占用较多磁盘空间
 
 ### 🔄 更新现有文档
 
@@ -299,13 +347,14 @@ CMD ["python", "main.py"]
 
 ## 📝 更新日志
 
-### v1.0.0 (2025-7-12)
+### v1.0.0 (2025-07-12)
 - ✨ 初始版本发布
 - 🧠 集成阿里云百炼Qwen模型
 - 📚 MCP协议知识库构建
 - 💬 Web界面开发
 - 🔍 智能检索功能
 - 📋 代码块复制功能
+- 🎯 解决大模型MCP知识缺失问题
 
 ## 📄 许可证
 
