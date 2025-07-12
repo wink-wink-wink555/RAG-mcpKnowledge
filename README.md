@@ -155,7 +155,7 @@ RAG-mcpKnowledge/
 
 ```python
 # API配置
-API_KEY = "your-api-key"           # 阿里云百炼API密钥
+API_KEY = "your-api-key-here"          # 阿里云百炼API密钥
 EMBEDDING_MODEL = "text-embedding-v4"  # 嵌入模型
 LLM_MODEL = "qwen2.5-72b-instruct"    # 大语言模型
 
