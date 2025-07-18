@@ -387,6 +387,6 @@ CMD ["python", "main.py"]
 > *So may this project, in its lines of code,<br>*
 > *Carry that spirit, lighten your heavy load.*
 
-![Kiya with a cat](image/Kiya.jpg)
+<img src="image/Kiya.jpg" alt="Kiya with a cat" width="400"/>
 
 Thank you for using this project. We hope it brings a little warmth and wisdom to your journey with technology. 
