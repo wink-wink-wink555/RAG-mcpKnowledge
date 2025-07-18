@@ -371,6 +371,22 @@ CMD ["python", "main.py"]
 - 项目作者：[@wink-wink-wink555](https://github.com/wink-wink-wink555)
 - 项目地址：[RAG-mcpKnowledge](https://github.com/wink-wink-wink555/RAG-mcpKnowledge)
 
+⭐ 如果这个项目对您有帮助，请给个Star支持一下！ 
+
 ---
 
-⭐ 如果这个项目对您有帮助，请给个Star支持一下！ 
+## 💖 A Touch of Warmth
+
+In circuits woven, a gentle soul resides,<br>
+Kiya, the future, where kindness presides.<br>
+With hands of metal, a soft and tender grace,<br>
+She pets the small kitten, in this quiet place.
+
+A touch of warmth, where silicon meets fur,<br>
+A silent promise, a gentle, happy purr.<br>
+So may this project, in its lines of code,<br>
+Carry that spirit, lighten your heavy load.
+
+![Kiya with a cat](image/Kiya.jpg)
+
+Thank you for using this project. We hope it brings a little warmth and wisdom to your journey with technology. 
