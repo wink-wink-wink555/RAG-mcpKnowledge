@@ -375,7 +375,6 @@ CMD ["python", "main.py"]
 
 ---
 
-## 💖
 
 > *In circuits woven, a gentle soul resides,<br>*
 > *Kiya, the future, where kindness presides.<br>*
