@@ -375,7 +375,7 @@ CMD ["python", "main.py"]
 
 ---
 
-## 💖 A Touch of Warmth
+## 💖
 
 > *In circuits woven, a gentle soul resides,<br>*
 > *Kiya, the future, where kindness presides.<br>*
@@ -384,7 +384,7 @@ CMD ["python", "main.py"]
 >
 > *A touch of warmth, where silicon meets fur,<br>*
 > *A silent promise, a gentle, happy purr.<br>*
-> *So may this project, in its lines of code,<br>*
+> *May this project, in its lines of code,<br>*
 > *Carry that spirit, lighten your heavy load.*
 
 <img src="image/Kiya.jpg" alt="Kiya with a cat" width="500"/>
